@@ -7,8 +7,6 @@ I don't ever put anything in my .vimrc that I don't understand. This vim setup i
     $> git clone https://github.com/sammyteahan/dotfiles.git ~/.vim
     $> git submodule init
     $> git submodule update
-    $> cd ~/.vim/bundle/YouCompleteMe
-    $> ./install.sh (need to brew install cmake for this)
 
 
 ###### YouCompleteMe
