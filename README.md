@@ -20,5 +20,5 @@ This package is a little bit special. You're going to need to have the cmake pac
 
 ###### Create symlink:
 
-    $> ln -s ~/dotfiles/vimrc ~/.vimrc
+    $> ln -s ~/.vim/vimrc ~/.vimrc
 
