@@ -44,7 +44,7 @@ set autoindent
 
 " ColorScheme
 syntax enable
-colorscheme itg_flat
+colorscheme antares
 
 " Enable mouse to keep myself sane
 set mouse=a
