@@ -61,3 +61,4 @@ execute pathogen#infect()
 " Map NERDTree to ctrl + o
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
+let NERDTreeIgnore = ['\.pyc$']
