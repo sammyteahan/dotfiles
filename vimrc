@@ -46,6 +46,15 @@ set autoindent
 syntax enable
 colorscheme antares
 
+" Powerline font for vim-airline
+let g:airline_powerline_fonts = 1
+
+" Syntax highlighting for jsx
+let g:jsx_ext_required = 0
+
+" Syntax highlighting for Riot (.tag files)
+au BufRead,BufNewFile *.tag :set filetype=html
+
 " Enable mouse to keep myself sane
 set mouse=a
 
