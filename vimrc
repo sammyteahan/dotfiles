@@ -44,7 +44,28 @@ set autoindent
 
 " ColorScheme
 syntax enable
-colorscheme antares
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
+" Powerline Font for vim-airline
+let g:airline_powerline_fonts = 1
+
+" Syntax highlighting for jsx
+let g:jsx_ext_required = 0
+
+" Syntax highlighting for Riot (.tag files)
+au BufRead,BufNewFile *.tag :set filetype=html
+
+" Set line width for Markdown files
+" ggvGgq to select and resize file
+au BufRead,BufNewFile *.md setlocal textwidth=160
+
+" Syntax highlighting for Handlebars
+au BufRead,BufNewFile *.handlebars :set filetype=html
+
+" Syntax highlighting for EJS
+au BufRead,BufNewFile *.ejs :set filetype=html
 
 " Enable mouse to keep myself sane
 set mouse=a
