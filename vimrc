@@ -54,6 +54,9 @@ let g:airline_powerline_fonts = 1
 " Syntax highlighting for jsx
 let g:jsx_ext_required = 0
 
+" Ignore node_modules, DS_Store, and git while fuzzy searching via <C-p>
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
 
@@ -66,12 +69,6 @@ au BufRead,BufNewFile *.handlebars :set filetype=html
 
 " Syntax highlighting for EJS
 au BufRead,BufNewFile *.ejs :set filetype=html
-
-" Powerline font for vim-airline
-let g:airline_powerline_fonts = 1
-
-" Syntax highlighting for jsx
-let g:jsx_ext_required = 0
 
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
