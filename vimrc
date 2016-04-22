@@ -54,8 +54,9 @@ let g:airline_powerline_fonts = 1
 " Syntax highlighting for jsx
 let g:jsx_ext_required = 0
 
-" Ignore node_modules, DS_Store, and git while fuzzy searching via <C-p>
+" Ignore node_modules, DS_Store, git and .pyc files while fuzzy searching via <C-p>
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+set wildignore+=*.pyc
 
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
