@@ -46,7 +46,7 @@ set autoindent
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme onedark
 
 " Powerline Font for vim-airline
 let g:airline_powerline_fonts = 1
