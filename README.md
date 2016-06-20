@@ -5,6 +5,7 @@ I don't ever put anything in my .vimrc that I don't understand. This vim setup i
 ###### To get started:
 
     $> git clone https://github.com/sammyteahan/dotfiles.git ~/.vim
+    $> cd .vim
     $> git submodule init
     $> git submodule update
 
