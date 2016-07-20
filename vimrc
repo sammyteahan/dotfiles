@@ -3,7 +3,7 @@ set relativenumber
 
 """ But, toggle between relative and absolute via <C-t>
 function! NumberToggle()
-  if(&relativenumber == 1)
+  if (&relativenumber == 1)
     set number
   else
     set relativenumber
@@ -55,8 +55,11 @@ let g:airline_powerline_fonts = 1
 let g:jsx_ext_required = 0
 
 " Ignore node_modules, DS_Store, git and .pyc files while fuzzy searching via <C-p>
+" Second wildignore prevents <C-p> from searching the heck out of vendor
+" files in a laravel/php environment
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 set wildignore+=*.pyc
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
 
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
@@ -74,7 +77,7 @@ au BufRead,BufNewFile *.ejs :set filetype=html
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
 
-" Enable mouse to keep myself sane
+" Enable mouse to keep sanity
 set mouse=a
 
 " Turn off compatibility of old vi stuff
@@ -83,10 +86,10 @@ set nocompatible
 " Use filetype plugins
 filetype plugin indent on
 
-" Use pathogen to manage runtimepath
-execute pathogen#infect()
-
 " Map NERDTree to ctrl + o
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
 let NERDTreeIgnore = ['\.pyc$']
+
+" Use pathogen to manage runtimepath
+execute pathogen#infect()
