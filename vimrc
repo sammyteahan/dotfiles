@@ -32,8 +32,8 @@ set shiftwidth=2
 set backspace=2
 
 """ Highlight Searches and highlight while searching 
-set hlsearch
-set incsearch
+""" set hlsearch
+""" set incsearch
 set ignorecase!
 
 """ Be able to clear highlights
@@ -50,6 +50,7 @@ colorscheme onedark
 
 " Powerline Font for vim-airline
 let g:airline_powerline_fonts = 1
+let g:airline_theme='molokai'
 
 " Syntax highlighting for jsx
 let g:jsx_ext_required = 0
