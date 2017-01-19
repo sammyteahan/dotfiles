@@ -1,59 +1,35 @@
-""" Show relative line numbers
-set relativenumber
+"----------------------------------Mappings------------------------------------"
 
-""" But, toggle between relative and absolute via <C-t>
-function! NumberToggle()
-  if (&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
+let mapleader = ','
 
-nnoremap <C-t> :call NumberToggle()<cr>
+" Make it easy to edit vimrc
+nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
-""" Mappings for multiple-cursors plugin
-""" Note - I always wan't to map the above 
-""" function to <C-n>, however, it makes
-""" more sense here. I use it more often
-""" anyways.
+" Be able to clear highlights easily
+nmap <Leader><space> :nohlsearch<cr>
 
-" Default mappings
+" Use ctags more efficiently
+nmap <Leader>f :tag<space>
+
+" Mappings for multiple-cursors plugin
+" Note - I always wan't to map the above
+" function to <C-n>, however, it makes
+" more sense here. I use it more often
+" anyways.
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
-""" Tab and space settings
-set expandtab
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
-set backspace=2
+" Some temporary mappings for moving 10 lines
+map <C-j> 10j
+map <C-k> 10k
 
-""" Highlight Searches and highlight while searching 
-""" set hlsearch
-""" set incsearch
-set ignorecase!
-
-""" Be able to clear highlights
-""" <Ctrl-l> in order to do so
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-
-set autoindent
-
-" ColorScheme
-syntax enable
-set background=dark
-let g:solarized_termcolors=256
-colorscheme onedark
-
-" Powerline Font for vim-airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='molokai'
-
-" Syntax highlighting for jsx
-let g:jsx_ext_required = 0
+" Map NERDTree to ctrl + o
+map <C-o> :NERDTreeToggle<CR>
+let NERDTreeShowLineNumbers=1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.pyc$']
 
 " Ignore node_modules, DS_Store, git and .pyc files while fuzzy searching via <C-p>
 " Second wildignore prevents <C-p> from searching the heck out of vendor
@@ -61,6 +37,11 @@ let g:jsx_ext_required = 0
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 set wildignore+=*.pyc
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
+
+"----------------------------------Visuals------------------------------------"
+
+" Show relative line numbers
+set relativenumber
 
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
@@ -87,10 +68,46 @@ set nocompatible
 " Use filetype plugins
 filetype plugin indent on
 
-" Map NERDTree to ctrl + o
-map <C-o> :NERDTreeToggle<CR>
-let NERDTreeShowLineNumbers=1
-let NERDTreeIgnore = ['\.pyc$']
+" Highlight Searches and highlight while searching
+set incsearch
+set hlsearch
+set ignorecase!
+
+
+set autoindent
+
+" ColorScheme
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme onedark
+
+" Powerline Font for vim-airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme='molokai'
+
+" Syntax highlighting for jsx
+let g:jsx_ext_required = 0
+
+" Default tab and space settings
+set expandtab
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
+set backspace=2
+
+"----------------------------------Helpers-------------------------------------"
+
+" Toggle between relative and absolute via <C-t>
+function! NumberToggle()
+  if (&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-t> :call NumberToggle()<cr>
 
 " Use pathogen to manage runtimepath
 execute pathogen#infect()
