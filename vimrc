@@ -50,8 +50,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
 
 "----------------------------------Visuals------------------------------------"
 " Show relative line numbers
-set relativenumber
-
+set relativenumber 
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
 
@@ -96,6 +95,12 @@ highlight Search guibg=LightBlue ctermbg=LightBlue term=underline
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Syntax highlighting for jsx
 let g:jsx_ext_required = 0
