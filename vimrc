@@ -1,15 +1,23 @@
 "----------------------------------Mappings------------------------------------"
-
 let mapleader = ','
 
 " Make it easy to edit vimrc
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
-" Be able to clear highlights easily
+" Clear highlights easily
 nmap <Leader><space> :nohlsearch<cr>
 
 " Use ctags more efficiently
 nmap <Leader>f :tag<space>
+
+" Highlight under cursor but don't jump to next word by default
+nnoremap * :keepjumps normal! mi*`i<CR>`
+
+" Jump between splits with <C-motion> instead of <C-W> motion
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-L> <C-W>l<C-W>_
+map <C-H> <C-W>h<C-W>_
 
 " Mappings for multiple-cursors plugin
 " Note - I always wan't to map the above
@@ -22,8 +30,8 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 " Some temporary mappings for moving 10 lines
-map <C-j> 10j
-map <C-k> 10k
+" map <C-j> 10j " This messes up navigation in vim :help
+" map <C-k> 10k " This messes up navigation in vim :help
 
 " Map NERDTree to ctrl + o
 map <C-o> :NERDTreeToggle<CR>
@@ -38,8 +46,9 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 set wildignore+=*.pyc
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
 
-"----------------------------------Visuals------------------------------------"
 
+
+"----------------------------------Visuals------------------------------------"
 " Show relative line numbers
 set relativenumber
 
@@ -73,7 +82,6 @@ set incsearch
 set hlsearch
 set ignorecase!
 
-
 set autoindent
 
 " ColorScheme
@@ -82,7 +90,10 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme onedark
 
-" Powerline Font for vim-airline
+" Custom colors for highlights
+highlight IncSearch guibg=LightBlue ctermbg=LightBlue term=underline
+highlight Search guibg=LightBlue ctermbg=LightBlue term=underline
+
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
 
@@ -96,8 +107,9 @@ set tabstop=2
 set shiftwidth=2
 set backspace=2
 
-"----------------------------------Helpers-------------------------------------"
 
+
+"----------------------------------Helpers-------------------------------------"
 " Toggle between relative and absolute via <C-t>
 function! NumberToggle()
   if (&relativenumber == 1)
