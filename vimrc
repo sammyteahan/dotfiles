@@ -1,4 +1,6 @@
+"------------------------------------------------------------------------------"
 "----------------------------------Mappings------------------------------------"
+"------------------------------------------------------------------------------"
 let mapleader = ','
 
 " Make it easy to edit vimrc
@@ -48,7 +50,9 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
 
 
 
+"------------------------------------------------------------------------------"
 "----------------------------------Visuals------------------------------------"
+"------------------------------------------------------------------------------"
 " Show relative line numbers
 set relativenumber 
 " Syntax highlighting for Riot (.tag files)
@@ -83,15 +87,16 @@ set ignorecase!
 
 set autoindent
 
-" ColorScheme
+" colorscheme
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colorscheme onedark
 
-" Custom colors for highlights
-highlight IncSearch guibg=LightBlue ctermbg=LightBlue term=underline
-highlight Search guibg=LightBlue ctermbg=LightBlue term=underline
+" Custom colors for highlights and other terminal locations
+hi IncSearch guibg=LightBlue ctermbg=LightBlue term=underline
+hi Search guibg=LightBlue ctermbg=LightBlue term=underline
+hi LineNr ctermbg=bg
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
@@ -114,7 +119,9 @@ set backspace=2
 
 
 
+"------------------------------------------------------------------------------"
 "----------------------------------Helpers-------------------------------------"
+"------------------------------------------------------------------------------"
 " Toggle between relative and absolute via <C-t>
 function! NumberToggle()
   if (&relativenumber == 1)
