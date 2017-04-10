@@ -55,6 +55,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
 "------------------------------------------------------------------------------"
 " Show relative line numbers
 set relativenumber 
+
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
 
@@ -89,9 +90,8 @@ set autoindent
 
 " colorscheme
 syntax enable
-set background=dark
-let g:solarized_termcolors=256
 colorscheme onedark
+let g:solarized_termcolors=256
 
 " Custom colors for highlights and other terminal locations
 hi IncSearch guibg=LightBlue ctermbg=LightBlue term=underline
@@ -135,3 +135,4 @@ nnoremap <C-t> :call NumberToggle()<cr>
 
 " Use pathogen to manage runtimepath
 execute pathogen#infect()
+
