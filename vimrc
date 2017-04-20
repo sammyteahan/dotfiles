@@ -90,7 +90,7 @@ set autoindent
 
 " colorscheme
 syntax enable
-colorscheme onedark
+colorscheme stormpetrel
 let g:solarized_termcolors=256
 
 " Custom colors for highlights and other terminal locations
