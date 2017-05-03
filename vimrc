@@ -39,7 +39,7 @@ let g:multi_cursor_quit_key='<Esc>'
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 
 " Ignore node_modules, DS_Store, git and .pyc files while fuzzy searching via <C-p>
 " Second wildignore prevents <C-p> from searching the heck out of vendor
