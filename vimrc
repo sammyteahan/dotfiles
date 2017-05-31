@@ -90,13 +90,13 @@ set autoindent
 
 " colorscheme
 syntax enable
-colorscheme stormpetrel
+colorscheme dracula
 let g:solarized_termcolors=256
 
 " Custom colors for highlights and other terminal locations
-hi IncSearch guibg=LightBlue ctermbg=LightBlue term=underline
-hi Search guibg=LightBlue ctermbg=LightBlue term=underline
-hi LineNr ctermbg=bg
+" hi IncSearch guibg=LightBlue ctermbg=LightBlue term=underline
+" hi Search guibg=LightBlue ctermbg=LightBlue term=underline
+" hi LineNr ctermbg=bg
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
