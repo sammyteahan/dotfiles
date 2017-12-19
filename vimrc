@@ -31,6 +31,11 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+" Mappings to format elm code on save
+" part of the 'elm-vim' package
+let g:elm_format_autosave = 1
+let g:elm_format_fail_silently = 0
+
 " Some temporary mappings for moving 10 lines
 " map <C-j> 10j " This messes up navigation in vim :help
 " map <C-k> 10k " This messes up navigation in vim :help
@@ -47,6 +52,7 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 set wildignore+=*.pyc
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
+set wildignore+=*.beam
 
 
 
@@ -54,7 +60,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
 "-- Visuals
 "--
 " Show relative line numbers
-set relativenumber 
+set relativenumber
 
 " Syntax highlighting for Riot (.tag files)
 au BufRead,BufNewFile *.tag :set filetype=html
