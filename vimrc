@@ -54,6 +54,9 @@ set wildignore+=*.pyc
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
 set wildignore+=*.beam
 
+" map ctrl-s to vim-ripgrep for fast searching
+map <C-s> :Rg
+
 
 
 "----
