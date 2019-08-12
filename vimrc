@@ -21,6 +21,10 @@ map <C-K> <C-W>k<C-W>_
 map <C-L> <C-W>l<C-W>_
 map <C-H> <C-W>h<C-W>_
 
+" tmp to try out <leader>wtf in a ruby file
+" puts the caller
+nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>"
+
 " Mappings for multiple-cursors plugin
 " Note - I always wan't to map the above
 " function to <C-n>, however, it makes
@@ -58,11 +62,11 @@ set wildignore+=*.beam
 map <C-g> :Rg 
 
 
-
 "----
 "-- Visuals
 "--
-" Show relative line numbers
+" Show relative line numbers but current line show number
+set number
 set relativenumber
 
 " Syntax highlighting for Riot (.tag files)
@@ -70,7 +74,7 @@ au BufRead,BufNewFile *.tag :set filetype=html
 
 " Set line width for Markdown files
 " ggvGgq to select and resize file
-au BufRead,BufNewFile *.md setlocal textwidth=160
+au BufRead,BufNewFile *.md setlocal textwidth=120
 
 " Syntax highlighting for Handlebars
 au BufRead,BufNewFile *.handlebars :set filetype=html
@@ -99,7 +103,7 @@ set autoindent
 
 " colorscheme
 syntax enable
-colorscheme dracula
+colorscheme dracula " with matching iterm theme
 let g:solarized_termcolors=256
 
 " Custom colors for highlights and other terminal locations
