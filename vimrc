@@ -76,6 +76,9 @@ au BufRead,BufNewFile *.tag :set filetype=html
 " ggvGgq to select and resize file
 au BufRead,BufNewFile *.md setlocal textwidth=120
 
+" Set line width for txt files
+au BufRead,BufNewFile *.txt setlocal textwidth=120
+
 " Syntax highlighting for Handlebars
 au BufRead,BufNewFile *.handlebars :set filetype=html
 
@@ -119,9 +122,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-
-" Syntax highlighting for jsx
-let g:jsx_ext_required = 0
 
 " Default tab and space settings
 set expandtab
