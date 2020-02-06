@@ -46,6 +46,8 @@ let g:elm_format_fail_silently = 0
 
 " Map NERDTree to ctrl + o
 map <C-o> :NERDTreeToggle<CR>
+" Reveal file in tree -> leader + |
+map <C-\> :NERDTreeFind<CR>
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
@@ -131,10 +133,9 @@ set shiftwidth=2
 set backspace=2
 
 
-
-"----
-"-- Helpers
-"--
+""
+" Helpers
+"
 " Toggle between relative and absolute via <C-t>
 function! NumberToggle()
   if (&relativenumber == 1)
