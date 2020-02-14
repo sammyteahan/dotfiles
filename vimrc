@@ -56,8 +56,9 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 " Second wildignore prevents <C-p> from searching the heck out of vendor
 " files in a laravel/php environment
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let NERDTreeRespectWildIgnore=1
 set wildignore+=*.pyc
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,coverage/*,vendor,*.swp,*.*.swp
 set wildignore+=*.beam
 
 " map ctrl-g to vim-ripgrep for fast searching
