@@ -109,7 +109,7 @@ set autoindent
 
 " colorscheme
 syntax enable
-colorscheme dracula " with matching iterm theme
+colorscheme nord " with matching iterm theme
 let g:solarized_termcolors=256
 
 " Custom colors for highlights and other terminal locations
@@ -118,7 +118,7 @@ let g:solarized_termcolors=256
 " hi LineNr ctermbg=bg
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='molokai'
+let g:airline_theme='base16'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
