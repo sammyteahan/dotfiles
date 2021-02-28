@@ -1,6 +1,6 @@
-"----
-"-- Mappings
-"--
+""
+" Mappings
+"
 let mapleader = ','
 
 " Make it easy to edit vimrc
@@ -40,10 +40,6 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 0
 
-" Some temporary mappings for moving 10 lines
-" map <C-j> 10j " This messes up navigation in vim :help
-" map <C-k> 10k " This messes up navigation in vim :help
-
 " Map NERDTree to ctrl + o
 map <C-o> :NERDTreeToggle<CR>
 " Reveal file in tree -> leader + |
@@ -64,10 +60,9 @@ set wildignore+=*.beam
 " map ctrl-g to vim-ripgrep for fast searching
 map <C-g> :Rg 
 
-
-"----
-"-- Visuals
-"--
+""
+" Visuals
+"
 " Show relative line numbers but current line show number
 set number
 set relativenumber
@@ -112,11 +107,14 @@ syntax enable
 colorscheme nord " with matching iterm theme
 let g:solarized_termcolors=256
 
-" Custom colors for highlights and other terminal locations
-" hi IncSearch guibg=LightBlue ctermbg=LightBlue term=underline
-" hi Search guibg=LightBlue ctermbg=LightBlue term=underline
-" hi LineNr ctermbg=bg
+""
+" emmet-vim
+"
+let g:user_emmet_leader_key=','
 
+""
+" Airline
+"
 let g:airline_powerline_fonts = 1
 let g:airline_theme='base16'
 
@@ -132,7 +130,6 @@ set softtabstop=2
 set tabstop=2
 set shiftwidth=2
 set backspace=2
-
 
 ""
 " Helpers
