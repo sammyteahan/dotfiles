@@ -46,3 +46,9 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
   url = https://github.com/preservim/nerdcommenter
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "bundle/goyo.vim"]
+	path = bundle/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
