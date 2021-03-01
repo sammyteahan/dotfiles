@@ -52,3 +52,6 @@
 [submodule "bundle/goyo.vim"]
 	path = bundle/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
+[submodule "bundle/vim-styled-components"]
+	path = bundle/vim-styled-components
+	url = https://github.com/styled-components/vim-styled-components
