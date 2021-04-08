@@ -21,9 +21,8 @@ map <C-K> <C-W>k<C-W>_
 map <C-L> <C-W>l<C-W>_
 map <C-H> <C-W>h<C-W>_
 
-" tmp to try out <leader>wtf in a ruby file
-" puts the caller
-nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>"
+" <leader>wtf
+nnoremap <leader>wtf oconsole.group('== group ==');<c-m>console.log();<c-m>console.groupEnd();<esc>"
 
 " Mappings for multiple-cursors plugin
 " Note - I always wan't to map the above
@@ -110,7 +109,17 @@ let g:solarized_termcolors=256
 ""
 " emmet-vim
 "
+" re-map trigger and settings for newline after expansion
+" if you need the old behavior, you can join the tag on
+" the same line with <leader>m after <leader>, or you
+" can remove the user setting below
+"
 let g:user_emmet_leader_key=','
+let g:user_emmet_settings = {
+\  'html' : {
+\    'block_all_childless' : 1,
+\  },
+\}
 
 ""
 " Airline
@@ -144,6 +153,9 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-t> :call NumberToggle()<cr>
+
+" copy/paste to system clipboard
+vnoremap <C-c> :w !pbcopy<CR><CR> noremap <C-v> :r !pbpaste<CR><CR>
 
 " Use pathogen to manage runtimepath
 execute pathogen#infect()
