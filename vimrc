@@ -154,8 +154,8 @@ endfunc
 
 nnoremap <C-t> :call NumberToggle()<cr>
 
-" copy/paste to system clipboard
-vnoremap <C-c> :w !pbcopy<CR><CR> noremap <C-v> :r !pbpaste<CR><CR>
+" copy to system clipboard
+vmap <C-c> :w !pbcopy<CR><CR>
 
 " Use pathogen to manage runtimepath
 execute pathogen#infect()
