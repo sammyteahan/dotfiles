@@ -1,6 +1,6 @@
 ## Dot Files
 
-I don't ever put anything in my .vimrc that I don't understand. This vim setup is always changing and getting to be a very comfortable setup for development.
+This vim setup is always changing and getting to be a very comfortable setup for development.
 
 ###### To get started:
 
@@ -22,4 +22,9 @@ This package is a little bit special. You're going to need to have the cmake pac
 ###### Create symlink:
 
     $> ln -s ~/.vim/vimrc ~/.vimrc
+
+
+###### Updating submodules
+
+    $> git submodule foreach git pull origin master
 
