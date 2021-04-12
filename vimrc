@@ -91,7 +91,7 @@ set mouse=a
 " Turn off compatibility of old vi stuff
 set nocompatible
 
-" Use filetype plugins
+" Use filetype plugins and indentation
 filetype plugin indent on
 
 " Highlight Searches and highlight while searching
