@@ -34,6 +34,11 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+""
+" Goyo
+"
+let g:goyo_width=120
+
 " Mappings to format elm code on save
 " part of the 'elm-vim' package
 let g:elm_format_autosave = 1
@@ -98,8 +103,10 @@ filetype plugin indent on
 set incsearch
 set hlsearch
 set ignorecase!
-
 set autoindent
+
+" Open vertical splits to the right by default
+set splitright
 
 " colorscheme
 syntax enable
