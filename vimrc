@@ -34,6 +34,11 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+""
+" Goyo
+"
+let g:goyo_width=120
+
 " Mappings to format elm code on save
 " part of the 'elm-vim' package
 let g:elm_format_autosave = 1
@@ -98,8 +103,10 @@ filetype plugin indent on
 set incsearch
 set hlsearch
 set ignorecase!
-
 set autoindent
+
+" Open vertical splits to the right by default
+set splitright
 
 " colorscheme
 syntax enable
@@ -139,6 +146,40 @@ set softtabstop=2
 set tabstop=2
 set shiftwidth=2
 set backspace=2
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
+""
+" Conquer of Completion settings
+"
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+"
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 ""
 " Helpers
